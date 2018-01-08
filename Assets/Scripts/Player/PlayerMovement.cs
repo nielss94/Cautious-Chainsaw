@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-
-    private Character character;
+    
     private bool canJump = true;
     private PlayerStats playerStats;
 
     void Start()
     {
         playerStats = GetComponent<PlayerStats>();
-        character = playerStats.character;
     }
 
 	void FixedUpdate () {
@@ -25,12 +23,12 @@ public class PlayerMovement : MonoBehaviour {
             else if (move < -0.1)
                 GetComponent<SpriteRenderer>().flipX = true;
 
-            transform.Translate(move * Time.deltaTime * (character ? character.moveSpeed : 1), 0, 0);
+            transform.Translate(move * Time.deltaTime * (playerStats.character ? playerStats.character.moveSpeed : 1), 0, 0);
         }
         if(jump > 0 && canJump)
         {
             canJump = false;
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, character.jumpHeight), ForceMode2D.Impulse);
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, playerStats.character.jumpHeight), ForceMode2D.Impulse);
         }
 	}
 

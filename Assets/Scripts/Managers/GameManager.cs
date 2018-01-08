@@ -6,8 +6,14 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     public GameObject player;
+    public static GameManager instance;
 
 	void Start () {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+
         DontDestroyOnLoad(gameObject);		
 	}
 

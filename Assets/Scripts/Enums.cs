@@ -8,3 +8,12 @@ public enum Abilities {
     SlowMotion
 	
 }
+
+[System.Serializable]
+public enum AbilityType
+{
+    Projectile,
+    Melee,
+    Self,
+    Environment
+}

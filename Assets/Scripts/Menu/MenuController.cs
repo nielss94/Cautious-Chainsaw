@@ -8,6 +8,7 @@ public class MenuController : MonoBehaviour {
     public List<Character> characters = new List<Character>();
     public List<PlayerSlot> playerSlots = new List<PlayerSlot>();
     public bool[] connectedPlayers = new bool[4];
+    
 
     public Image selector;
     public Image[] selectors = new Image[4];
@@ -22,9 +23,8 @@ public class MenuController : MonoBehaviour {
                 else
                     print("player " + (i + 1) + " already connected");
             }
-
-
-            if (Input.GetAxisRaw("NextSelect_P" + (i + 1)) != 0)
+            
+            if (Input.GetButtonDown("NextSelect_P" + (i + 1)))
             {
                 if (connectedPlayers[i] == false)
                     ConnectPlayer(i);
@@ -41,8 +41,13 @@ public class MenuController : MonoBehaviour {
                     }
                     selectors[i].rectTransform.localPosition = new Vector3(0, 0, 0);
                     playerSlots[i].SetCharacter(selectors[i].transform.parent.GetComponent<CharacterOption>().character);
-                }
-                    
+                }   
+            }
+
+            if (Input.GetButtonDown("Submit"))
+            {
+                GameManager.instance.StartGame();
+                return;
             }
         }
     }

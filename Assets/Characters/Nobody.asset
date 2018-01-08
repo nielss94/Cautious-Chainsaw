@@ -9,27 +9,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 856891df08370ca4dbfa909238320a71, type: 3}
-  m_Name: Bram
+  m_Name: Nobody
   m_EditorClassIdentifier: 
-  name: Bram
-  sprite: {fileID: 21300000, guid: 4996a964fa9322e43b974926ad9d2698, type: 3}
-  moveSpeed: 10
-  jumpHeight: 9
+  name: Nobody
+  sprite: {fileID: 21300000, guid: 85270444c5a343b4dbe849cb18b3274f, type: 3}
+  moveSpeed: 2
+  jumpHeight: 15
   strength: 9
   abilities:
   - ability: 4
-    abilityType: 3
-    cooldown: 5.13
-    power: 4.52
+    abilityType: 2
+    cooldown: 5.37
+    power: 1
   - ability: 2
-    abilityType: 1
+    abilityType: 0
     cooldown: 1.8
     power: 2.57
-  - ability: 1
+  - ability: 0
     abilityType: 0
     cooldown: 2
     power: 1.48
   - ability: 3
-    abilityType: 2
+    abilityType: 0
     cooldown: 5
     power: 2.43

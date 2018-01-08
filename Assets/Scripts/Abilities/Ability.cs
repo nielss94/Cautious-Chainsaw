@@ -6,6 +6,7 @@ using UnityEngine;
 public class Ability  {
 
     public Abilities ability;
+    public AbilityType abilityType;
 
     [Range(0,10)]public float cooldown;
     [Range(1, 5)]public float power;
