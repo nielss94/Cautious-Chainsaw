@@ -32,7 +32,6 @@ public class AbilityCaster : MonoBehaviour {
                 projectiles.Fire(ability.ability, player);
                 break;
             case AbilityType.Self:
-                print(" asdasdsadsa ");
                 break;
         }
     }

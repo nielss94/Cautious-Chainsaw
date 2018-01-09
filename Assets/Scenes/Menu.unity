@@ -950,7 +950,7 @@ Prefab:
         type: 2}
       propertyPath: character
       value: 
-      objectReference: {fileID: 11400000, guid: a171597bad2e98e4c9431a511d55753c,
+      objectReference: {fileID: 11400000, guid: 00e8d7f613d269348a6235c84056eba8,
         type: 2}
     - target: {fileID: 114559385641264792, guid: 24bf95966c27a6046acef6258759a00c,
         type: 2}
@@ -1193,7 +1193,7 @@ Prefab:
         type: 2}
       propertyPath: character
       value: 
-      objectReference: {fileID: 11400000, guid: a171597bad2e98e4c9431a511d55753c,
+      objectReference: {fileID: 11400000, guid: 7d380a5d6ce39504296bf38c2f347ad2,
         type: 2}
     - target: {fileID: 114559385641264792, guid: 24bf95966c27a6046acef6258759a00c,
         type: 2}

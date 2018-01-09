@@ -18,14 +18,18 @@ MonoBehaviour:
   strength: 9
   abilities:
   - ability: 4
+    abilityType: 0
     cooldown: 5.37
     power: 1
   - ability: 2
+    abilityType: 0
     cooldown: 1.8
     power: 2.57
-  - ability: 0
+  - ability: 2
+    abilityType: 0
     cooldown: 2
     power: 1.48
   - ability: 3
+    abilityType: 0
     cooldown: 5
     power: 2.43
