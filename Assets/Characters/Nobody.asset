@@ -25,7 +25,7 @@ MonoBehaviour:
     abilityType: 0
     cooldown: 1.8
     power: 2.57
-  - ability: 0
+  - ability: 2
     abilityType: 0
     cooldown: 2
     power: 1.48
