@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour {
     
     private bool canJump = true;
     private PlayerStats playerStats;
+    [SerializeField]private float airTime;
 
     void Start()
     {
@@ -32,11 +33,19 @@ public class PlayerMovement : MonoBehaviour {
         }
 	}
 
-    void OnCollisionEnter2D(Collision2D other)
+    void Update()
     {
-        if (other.gameObject.CompareTag("Floor"))
+        if (!canJump)
+            airTime += Time.deltaTime;
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.down, 50);
+        
+        if (Vector2.Distance(transform.position, hit.point) < 1.2 && !canJump && airTime > 0.5f)
         {
             canJump = true;
+            airTime = 0;
         }
     }
+
+    
 }

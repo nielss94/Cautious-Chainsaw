@@ -36,9 +36,9 @@ public class LevelGenerator : MonoBehaviour {
             if (colorMapping.color.Equals(pixelColor))
             {
                 Vector2 position = new Vector2(x, y);
-                Instantiate(colorMapping.prefab, position, Quaternion.identity, transform);
+                GameObject go = Instantiate(colorMapping.prefab, position, Quaternion.identity, transform) as GameObject;
+                go.name = colorMapping.prefab.name;
             }
         }
     }
-    
 }

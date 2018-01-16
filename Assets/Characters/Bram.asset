@@ -14,7 +14,7 @@ MonoBehaviour:
   name: Bram
   sprite: {fileID: 21300000, guid: 4996a964fa9322e43b974926ad9d2698, type: 3}
   moveSpeed: 10
-  jumpHeight: 9
+  jumpHeight: 13
   strength: 9
   abilities:
   - ability: 4
