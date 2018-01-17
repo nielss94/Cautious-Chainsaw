@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(1);
         for (int i = 0; i < characters.Count; i++)
         {
-            GameObject go = Instantiate(player);
+            GameObject go = Instantiate(player, new Vector2(10,4), Quaternion.identity);
             PlayerStats ps = go.GetComponent<PlayerStats>();
             go.GetComponent<SpriteRenderer>().sprite = characters[i].sprite;
             ps.playerIndex = i + 1;
