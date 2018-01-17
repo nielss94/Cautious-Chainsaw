@@ -8,6 +8,11 @@ public class Fireball : MonoBehaviour {
     public float speed;
     public int baseDamage;
 
+    void Start()
+    {
+        Destroy(gameObject, 4);
+    }
+
     void Update()
     {
         transform.Translate(-speed * Time.deltaTime, 0, 0);
